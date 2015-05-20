@@ -73,7 +73,7 @@ NSString * const AFSoundPlaybackFinishedNotification = @"kAFSoundPlaybackFinishe
             block(_currentItem);
         }
         
-        if (self.statusDictionary[AFSoundStatusDuration] == self.statusDictionary[AFSoundStatusTimeElapsed]) {
+        if ([self.statusDictionary[AFSoundStatusDuration] isEqualToNumber:self.statusDictionary[AFSoundStatusTimeElapsed]]) {
             
             [_feedbackTimer pauseTimer];
             
